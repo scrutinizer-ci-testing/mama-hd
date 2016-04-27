@@ -7,7 +7,7 @@ build:
     tests:
         override: 
             -
-                command: './node_modules/jscs/bin/jscs . -c --reporter=json  > jscs-data'
+                command: './node_modules/jscs/bin/jscs . --reporter=json  > jscs-data'
                 analysis:
                     file: 'jscs-data'
                     format: 'jscs-json'
