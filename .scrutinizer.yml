@@ -1,0 +1,13 @@
+build:
+    environment:
+        node: '5.1.0'
+    dependencies:
+        after:
+            - npm install jshint
+    tests:
+        override: 
+            -
+                command: './node_modules/.bin/jshint ./ --checkstyle-reporter > jshint-data'
+                analysis:
+                    file: 'jshint-data'
+                    format: 'jshint-checkstyle'
